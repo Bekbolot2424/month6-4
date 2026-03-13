@@ -1,6 +1,8 @@
-import {api} from "./axios"
+// auth.api.js
+import { api } from "./axios";
 
 export const authApi = {
     register: (data) => api.post("/auth/register", data),
-    login: (data) => api.post("/auth/login", data)
-}
+    login: (data) => api.post("/auth/login", data),
+    getProfile: () => api.get("/auth/profile"),
+};
